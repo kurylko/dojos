@@ -81,11 +81,23 @@ ORDER BY number_of_rest DESC;
 
 15. Select menu's title and dishes' count for each menu
 
+SELECT  title, COUNT(dish_id) AS count_dishes
+FROM menu_dish
+    INNER JOIN menu ON menu_id = menu.id
+    GROUP BY title
+    ORDER BY count_dishes ASC;
+
 16. Select the title of the menu with the most dishes
+
+
 
 17. Select, for each restaurant, its name and how many menus it sells (some restaurants might not have any menu)
 
+
+
 18. Select all menu's title and dishes count, where menus have more than two dishes.
+
+
 
 19. Select all restaurant's name which sells at least one menu where dishes' price combined is 30 or more
 
